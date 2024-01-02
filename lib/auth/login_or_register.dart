@@ -1,4 +1,6 @@
 import "package:flutter/material.dart";
+import "package:the_wall/pages/login_page.dart";
+import "package:the_wall/pages/register_page.dart";
 
 class LoginOrRegister extends StatefulWidget {
   const LoginOrRegister({Key? key}) : super(key: key);
@@ -18,6 +20,10 @@ class _LoginOrRegisterState extends State<LoginOrRegister> {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    if (showLoginPage) {
+      return LoginPage(onTap: togglePages);
+    } else {
+      return RegisterPage(onTap: togglePages);
+    }
   }
 }
