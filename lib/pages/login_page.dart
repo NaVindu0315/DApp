@@ -50,6 +50,10 @@ class _LoginPageState extends State<LoginPage> {
                     obsecureText: false),
 
                 //pwd
+                MyTextField(
+                    controller: passwordTextController,
+                    hintText: 'password',
+                    obsecureText: true),
 
                 //sign in button
 
