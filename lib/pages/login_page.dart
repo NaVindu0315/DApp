@@ -12,26 +12,41 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[300],
-      body:  Column(
-        children: [
-          //logo
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 50,
+              ),
+              //logo
+              Icon(
+                Icons.lock,
+                size: 100,
+              ),
+              SizedBox(
+                height: 50,
+              ),
+              //welcome back message
+              //welcome back message
+              Text(
+                "welcome Back You've been Missed",
+              ),
+              SizedBox(
+                height: 25,
+              ),
 
+              //email
 
+              //pwd
 
-          //welcome back message
+              //sign in button
 
-
-          //email
-
-          //pwd
-
-
-          //sign in button
-
-
-          //go to register
-        ],
+              //go to register
+            ],
+          ),
+        ),
       ),
-    )
+    );
   }
 }
