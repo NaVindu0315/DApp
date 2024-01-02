@@ -10,6 +10,28 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: Colors.grey[300],
+      body:  Column(
+        children: [
+          //logo
+
+
+
+          //welcome back message
+
+
+          //email
+
+          //pwd
+
+
+          //sign in button
+
+
+          //go to register
+        ],
+      ),
+    )
   }
 }
