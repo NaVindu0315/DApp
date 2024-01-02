@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:the_wall/auth/login_or_register.dart";
 import "package:the_wall/pages/login_page.dart";
 import "package:the_wall/pages/register_page.dart";
 
@@ -12,9 +13,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:
-          //LoginPage(),
-          //RegisterPage(),
+      home: LoginOrRegister(),
+      //LoginPage(),
+      //RegisterPage(),
     );
   }
 }
