@@ -4,7 +4,8 @@ import "../components/button.dart";
 import "../components/text_field.dart";
 
 class RegisterPage extends StatefulWidget {
-  const RegisterPage({Key? key}) : super(key: key);
+  final Function()? onTap;
+  const RegisterPage({Key? key, required this.onTap}) : super(key: key);
 
   @override
   State<RegisterPage> createState() => _RegisterPageState();
@@ -14,6 +15,7 @@ class _RegisterPageState extends State<RegisterPage> {
   //text editing controllers
   final emailTextController = TextEditingController();
   final passwordTextController = TextEditingController();
+  final confirmpasswordTextController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +41,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 //welcome back message
                 //welcome back message
                 Text(
-                  "welcome Back You've been Missed",
+                  "Register Now",
                   style: TextStyle(
                     color: Colors.grey,
                   ),
@@ -59,19 +61,24 @@ class _RegisterPageState extends State<RegisterPage> {
                     controller: passwordTextController,
                     hintText: 'password',
                     obsecureText: true),
+                //pswrd confirm
+                MyTextField(
+                    controller: confirmpasswordTextController,
+                    hintText: 'Confirm password',
+                    obsecureText: true),
                 SizedBox(
                   height: 10,
                 ),
 
                 //sign in button
-                MyButton(onTap: null, text: "Sign in"),
+                MyButton(onTap: null, text: "Sign UP"),
 
                 //go to register
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Not a member?',
+                      'allready signed up?',
                       style: TextStyle(
                         color: Colors.grey,
                       ),
@@ -80,9 +87,9 @@ class _RegisterPageState extends State<RegisterPage> {
                       width: 4,
                     ),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: widget.onTap,
                       child: Text(
-                        'Register now ',
+                        ' log in ',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.blue,
