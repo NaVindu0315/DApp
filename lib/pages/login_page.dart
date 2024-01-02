@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:the_wall/components/button.dart";
 import "package:the_wall/components/text_field.dart";
 
 class LoginPage extends StatefulWidget {
@@ -56,8 +57,25 @@ class _LoginPageState extends State<LoginPage> {
                     obsecureText: true),
 
                 //sign in button
+                MyButton(onTap: null, text: "Sign in"),
 
                 //go to register
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('Not a member?'),
+                    SizedBox(
+                      width: 4,
+                    ),
+                    Text(
+                      'Register now ',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.blue,
+                      ),
+                    )
+                  ],
+                )
               ],
             ),
           ),
