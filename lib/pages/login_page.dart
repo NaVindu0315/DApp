@@ -39,6 +39,9 @@ class _LoginPageState extends State<LoginPage> {
                 //welcome back message
                 Text(
                   "welcome Back You've been Missed",
+                  style: TextStyle(
+                    color: Colors.grey,
+                  ),
                 ),
                 SizedBox(
                   height: 25,
@@ -55,6 +58,9 @@ class _LoginPageState extends State<LoginPage> {
                     controller: passwordTextController,
                     hintText: 'password',
                     obsecureText: true),
+                SizedBox(
+                  height: 10,
+                ),
 
                 //sign in button
                 MyButton(onTap: null, text: "Sign in"),
@@ -63,7 +69,12 @@ class _LoginPageState extends State<LoginPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Not a member?'),
+                    Text(
+                      'Not a member?',
+                      style: TextStyle(
+                        color: Colors.grey,
+                      ),
+                    ),
                     SizedBox(
                       width: 4,
                     ),
