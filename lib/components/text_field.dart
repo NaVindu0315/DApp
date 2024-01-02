@@ -10,7 +10,7 @@ class MyTextField extends StatelessWidget {
     required this.controller,
     required this.hintText,
     required this.obsecureText,
-});
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +20,10 @@ class MyTextField extends StatelessWidget {
       decoration: InputDecoration(
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(color: Colors.white),
-        )
+        ),
+        focusedBorder:
+            OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
       ),
     );
   }
 }
-;
