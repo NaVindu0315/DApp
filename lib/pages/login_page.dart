@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:the_wall/components/text_field.dart";
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -18,36 +19,43 @@ class _LoginPageState extends State<LoginPage> {
       backgroundColor: Colors.grey[300],
       body: SafeArea(
         child: Center(
-          child: Column(
-            children: [
-              SizedBox(
-                height: 50,
-              ),
-              //logo
-              Icon(
-                Icons.lock,
-                size: 100,
-              ),
-              SizedBox(
-                height: 50,
-              ),
-              //welcome back message
-              //welcome back message
-              Text(
-                "welcome Back You've been Missed",
-              ),
-              SizedBox(
-                height: 25,
-              ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 50,
+                ),
+                //logo
+                Icon(
+                  Icons.lock,
+                  size: 100,
+                ),
+                SizedBox(
+                  height: 50,
+                ),
+                //welcome back message
+                //welcome back message
+                Text(
+                  "welcome Back You've been Missed",
+                ),
+                SizedBox(
+                  height: 25,
+                ),
 
-              //email
+                //email
+                MyTextField(
+                    controller: emailTextController,
+                    hintText: 'Email',
+                    obsecureText: false),
 
-              //pwd
+                //pwd
 
-              //sign in button
+                //sign in button
 
-              //go to register
-            ],
+                //go to register
+              ],
+            ),
           ),
         ),
       ),
