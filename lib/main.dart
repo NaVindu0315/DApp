@@ -1,26 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'contract_linking.dart';
+import 'helloUI.dart';
 
 void main() {
   runApp(MaterialApp(home: MyApp()));
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-          body: Column(
-        children: [
-          Text('hi'),
-        ],
-      )),
+    // Inserting Provider as a parent of HelloUI()
+    return ChangeNotifierProvider<ContractLinking>(
+      create: (_) => ContractLinking(),
+      child: MaterialApp(
+        title: "Hello World",
+        theme: ThemeData(
+            brightness: Brightness.dark,
+            primaryColor: Colors.cyan[400],
+            hintColor: Colors.deepOrange[200]),
+        home: HelloUI(),
+      ),
     );
   }
 }
