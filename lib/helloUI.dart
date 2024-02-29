@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'contract_linking.dart';
-
+/*
 class HelloUI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class HelloUI extends StatelessWidget {
                                   fontWeight: FontWeight.bold, fontSize: 52),
                             ),
                             Text(
-                              contractLink.deployedName,
+                              ,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 52,
@@ -79,3 +79,4 @@ class HelloUI extends StatelessWidget {
     );
   }
 }
+*/
