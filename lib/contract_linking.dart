@@ -4,19 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart';
 
-import 'package:web3dart/web3dart.dart';
-import 'package:web_socket_channel/io.dart';
 
-class ContractLinking extends ChangeNotifier {
-  final String _rpcURl = "http://10.0.2.2:7545";
-  final String _wsURl = "ws://10.0.2.2:7545/";
-  final String _privateKey =
-      "a3a3229cdc4e6cc94e79c7f5d34f2e7d761fc4116707e82b0e6bbe296b51c153";
-
-  late Web3Client _client;
-  late String _abiCode;
-
-  late EthereumAddress _contractAddress;
   late Credentials _credentials;
 
   late DeployedContract _contract;
